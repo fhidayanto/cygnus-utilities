@@ -5,11 +5,10 @@ fieldset.search {
 	padding-left: 0;
 	padding-right: 0;
 	-moz-box-shadow: 0.1em;
-	-webkit-box-shadow: 0.1em;
 	-moz-border-radius: 0.3em;
-	-webkit-border-radius: 0.3em;
+	-webkit-box-shadow: 0.1em;
+	-webkit-border-radius: 0.4em;
 	box-shadow: none;
-	-webkit-border-radius: 0.3em;
 	font-size: 12px;
 	font-weight: bold;
 }
@@ -29,7 +28,8 @@ fieldset.search .fieldcontain {
 
 fieldset.search .fieldcontain label,input,select {
 	margin:0em;
-	
+	padding-right: 10px;
+		
 }
 
 fieldset.search .fieldcontain label {
@@ -38,12 +38,13 @@ fieldset.search .fieldcontain label {
 
 fieldset.search .fieldcontain br {
 	clear:left;
+	
 }
 
 fieldset.search .fieldcontain input.save {
-	
+	border: 1px solid #CCCCCC;
 	-moz-border-radius: 0.3em;
 	-webkit-border-radius: 0.3em;
-		-moz-box-shadow: 0.3em;
+	-moz-box-shadow: 0.3em;
 	-webkit-box-shadow: 0.3em;
 }

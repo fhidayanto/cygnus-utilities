@@ -7,11 +7,13 @@
 		<meta name="layout" content="cygnus-forms">
 		<g:set var="entityName" value="\${message(code: '${domainClass.propertyName}.label', default: '${className}')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
+		<parameter name="pageEName" value="${domainClass.propertyName}" />
 	</head>
 	<body>
 		<a href="#list-${domainClass.propertyName}" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
+				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
@@ -57,10 +59,10 @@
 			
 			<div class="pagination">
 			<g:if test="\${params.action == 'list' }">
-				<g:paginate total="${propertyName}Total}" />
+				<g:paginate total="{${propertyName}Total}" />
 			</g:if>
 			<g:else>
-				<g:paginate total="${propertyName}Total}"
+				<g:paginate total="{${propertyName}Total}"
 					action="cygnusFilteredSearch"
 					params="\${params}"
 					max="\${params.max}"/>
